@@ -45,3 +45,57 @@ function titleClickHandler(event){
   for(let link of links){
   link.addEventListener('click', titleClickHandler);
 }
+
+// II część modułu
+
+const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
+
+function generateTitleLinks(){
+
+  /* remove contents of titleList */
+  const titleList = document.querySelector(optTitleListSelector);
+	titleList.innerHTML = '';
+
+
+
+  /* for each article */
+  let html = '';
+
+
+
+  const articles = document.querySelectorAll(optArticleSelector);
+  for(let article of articles){
+    console.log(article);
+    const articleId = article.getAttribute('id');
+
+    /* get the article id */
+  console.log('articleId');
+  console.log(articleId);
+
+
+    /* find the title element */
+
+  const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+
+
+    /* get the title from the title element */
+
+
+  const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+  console.log(articleId);
+  console.log(articleTitle);
+
+
+    /* create HTML of the link */
+    html = html + linkHTML;
+
+
+    /* insert link into titleList */
+}
+  titleList.innerHTML = html;
+  console.log(titleList, html);
+}
+
+generateTitleLinks();
