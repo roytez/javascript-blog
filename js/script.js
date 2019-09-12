@@ -40,11 +40,12 @@ function titleClickHandler(event){
 
 }
 
-  const links = document.querySelectorAll('.titles a');
+/*  const links = document.querySelectorAll('.titles a');
 
   for(let link of links){
   link.addEventListener('click', titleClickHandler);
 }
+  console.log(links); */
 
 // II część modułu
 
@@ -96,6 +97,14 @@ function generateTitleLinks(){
 }
   titleList.innerHTML = html;
   console.log(titleList, html);
+
+  const links = document.querySelectorAll('.titles a');
+
+  for(let link of links){
+  link.addEventListener('click', titleClickHandler);
+}
+  console.log(links);
+
 }
 
 generateTitleLinks();
