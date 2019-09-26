@@ -104,12 +104,11 @@ generateTitleLinks();
 
 function generateTags(){
   /* find all articles */
-  const articles = document.querySelectorAll(optArticleTagsSelector);
+  const articles = document.querySelectorAll(optArticleSelector);
   console.log(articles);
   /* START LOOP: for every article: */
   for(let article of articles){
     console.log(article);
-
 
     /* find tags wrapper */
     const tagsList = article.querySelector(optArticleTagsSelector);
@@ -123,9 +122,8 @@ function generateTags(){
     console.log('articleTags');
     console.log(articleTags);
 
-
-
     /* split tags into array */
+
 
     /* START LOOP: for each tag */
 
