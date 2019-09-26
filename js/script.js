@@ -123,18 +123,22 @@ function generateTags(){
     console.log(articleTags);
 
     /* split tags into array */
-
+    const articleTagsArray = articleTags.split(' ');
+    console.log(articleTagsArray);
 
     /* START LOOP: for each tag */
-
+    for(let tag of articleTagsArray){
     /* generate HTML of the link */
-
-    /* add generated code to html variable */
-
+      console.log(tag);
+      /* add generated code to html variable */
+      const linkHTML = '<li><a href="#' + articleTags +  + tag + '</a></li>';
+      html = html + linkHTML;
+      console.log(linkHTML);
     /* END LOOP: for each tag */
-
+    }
     /* insert HTML of all the links into the tags wrapper */
-
+    tagsList.innerHTML = html;
+    console.log(tagsList, html);
   /* END LOOP: for every article: */
   }
 }
