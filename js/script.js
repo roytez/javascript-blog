@@ -168,15 +168,15 @@ function tagClickHandler(event){
   /* END LOOP: for each active tag link */
   }
   /* find all tag links with "href" attribute equal to the "href" constant */
-  // tag = document.querySelectorAll('href');
+  tag = document.querySelectorAll();
   /* START LOOP: for each found tag link */
-  //for(let tags of tag){
+  for(let tags of tag){
   /* add class active */
-  //tags.classList.add('active');
-  //console.log(tag.classList);
+    tags.classList.add('active');
+    console.log(tag.classList);
 
   /* END LOOP: for each found tag link */
-
+  }
   /* execute function "generateTitleLinks" with article selector as argument */
   generateTitleLinks('[data-tags~="' + tag + '"]');
 }
