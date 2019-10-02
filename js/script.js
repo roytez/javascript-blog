@@ -45,7 +45,8 @@ function titleClickHandler(event){
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles',
-  optArticleTagsSelector = '.post-tags .list';
+  optArticleTagsSelector = '.post-tags .list',
+  optArticleAuthorSelector = '.section-title .list';
 
 function generateTitleLinks(customSelector = ''){
   /* remove contents of titleList */
@@ -60,7 +61,6 @@ function generateTitleLinks(customSelector = ''){
   for(let article of articles){
     console.log(article);
     const articleId = article.getAttribute('id');
-    console.log(customSelector);
 
     /* get the article id */
     console.log('articleId');
@@ -196,3 +196,15 @@ function addClickListenersToTags(){
 }
 
 addClickListenersToTags();
+
+function generateAuthors(){
+  /* find all authors */
+  const authors = document.querySelectorAll(optArticleAuthorSelector);
+  console.log(authors);
+  /* in each article, add the author in the data-author attribute (remove the author from the .post-author wrapper) */
+
+  /* display author as a link in the post-author wrapper, under the title of the article */
+
+/* link clicking the author link to generate a filtered list of articles */
+}
+generateAuthors();
