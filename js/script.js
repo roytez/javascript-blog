@@ -168,9 +168,10 @@ function tagClickHandler(event){
   /* END LOOP: for each active tag link */
   }
   /* find all tag links with "href" attribute equal to the "href" constant */
-  tag = document.querySelectorAll();
+  const tagLinks = document.querySelectorAll(href);
+  console.log(tagLinks);
   /* START LOOP: for each found tag link */
-  for(let tags of tag){
+  for(let tags of tagLinks){
   /* add class active */
     tags.classList.add('active');
     console.log(tag.classList);
