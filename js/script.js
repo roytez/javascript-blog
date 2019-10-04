@@ -199,8 +199,8 @@ function authorClickHandler(){
   const author = href.replace('#author-', '');
   console.log(author);
 
-  /* find all authors links with class active */
-  const articleAuthor = document.querySelectorAll('a.active[href^="#author-"]');
+  /* find all authors links */
+  const articleAuthor = document.querySelectorAll('[href^="#author-"]');
   console.log(articleAuthor);
 
   /* START LOOP: for each active author link */
@@ -223,7 +223,8 @@ function authorClickHandler(){
   /* END LOOP: for each found author link */
   }
   /* execute function "generateTitleLinks" with article selector as argument */
-  generateTitleLinks('[data-author~="' + author + '"]');
+  generateTitleLinks('[data-author="' + author + '"]');
+  console.log(generateTitleLinks);
 }
 
 function addClickListenersToAuthors(){
