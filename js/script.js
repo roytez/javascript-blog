@@ -170,13 +170,14 @@ function addClickListenersToTags(){
 addClickListenersToTags();
 
 function generateAuthors(){
-  /* find all authors */
+  /* find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
+
   /* START LOOP: for every article: */
   for(let article of articles){
     /* find author wrapper */
     const author = article.querySelector(optArticleAuthorSelector);
-
+    console.log(author);
     /* get author from data-author attribute */
     const authorName = author.getAttribute('data-author');
 
@@ -197,7 +198,6 @@ function authorClickHandler(){
 
   /* make a new constant "author" and extract tag from the "href" constant */
   const author = href.replace('#author-', '');
-  console.log(author);
 
   /* find all authors links */
   const articleAuthor = document.querySelectorAll('[href^="#author-"]');
