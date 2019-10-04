@@ -177,6 +177,7 @@ function generateAuthors(){
   for(let article of articles){
     /* find author wrapper */
     const author = article.querySelector(optArticleAuthorSelector);
+    author.innerHTML = '';
     console.log(author);
     /* get author from data-author attribute */
     const authorName = author.getAttribute('data-author');
