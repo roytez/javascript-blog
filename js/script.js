@@ -39,7 +39,8 @@ const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles',
   optArticleTagsSelector = '.post-tags .list',
-  optArticleAuthorSelector = '.post-author';
+  optArticleAuthorSelector = '.authors',
+  optTagsListSelector = '.tags.list';
 
 function generateTitleLinks(customSelector = ''){
   /* remove contents of titleList */
@@ -80,6 +81,9 @@ generateTitleLinks();
 // I część II modułu
 
 function generateTags(){
+  /* [NEW] create a new variable allTags with an empty array */
+  let allTags = [];
+
   /* find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
 
@@ -105,12 +109,23 @@ function generateTags(){
       const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
       /* add generated code to html variable */
       html = html + linkHTML;
+      /* [NEW] check if this link is NOT already in allTags */
+      if(allTags.indexOf(linkHTML) == -1){
+        /* [NEW] add generated code to allTags array */
+        allTags.push(linkHTML);
+      }
+
     /* END LOOP: for each tag */
     }
     /* insert HTML of all the links into the tags wrapper */
     tagsList.innerHTML = html;
   /* END LOOP: for every article: */
   }
+  /* [NEW] find list of tags in right column */
+  const tagList = document.querySelector('.tags');
+
+  /* [NEW] add html from allTags to tagList */
+  tagList.innerHTML = allTags.join(' ');
 }
 
 generateTags();
@@ -170,20 +185,23 @@ function addClickListenersToTags(){
 addClickListenersToTags();
 
 function generateAuthors(){
+  let allAuthors ={};
   /* find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
 
+  /* find author wrapper */
+  const authorWrapper = document.querySelector(optArticleAuthorSelector);
+  /* make html variable with empty string */
+  let html = '';
+
   /* START LOOP: for every article: */
   for(let article of articles){
-    /* find author wrapper */
-    const author = article.querySelector(optArticleAuthorSelector);
-    author.innerHTML = '';
-    console.log(author);
-    /* get author from data-author attribute */
-    const authorName = author.getAttribute('data-author');
 
+    /* get author from data-author attribute */
+    const author = article.getAttribute('data-author');
+    const postAuthor = article.querySelector('.post .post-author');
+    postAuthor.innerHTML = 'by <a href="#author-' + author + '">' + author + '</a>';
     /* generate HTML of the link */
-    author.innerHTML = 'by <a href="#author-' + authorName +'">' + authorName + '</a>';
   }
 }
 generateAuthors();
@@ -231,7 +249,7 @@ function authorClickHandler(){
 function addClickListenersToAuthors(){
   /* find all links to authors */
   const authors = document.querySelectorAll('a[href^="#author-"');
-  console.log(authors);
+
   /* START LOOP: for each link */
   for(let author of authors){
 
