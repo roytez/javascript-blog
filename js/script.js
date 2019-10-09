@@ -202,7 +202,31 @@ function generateAuthors(){
     const postAuthor = article.querySelector('.post .post-author');
     postAuthor.innerHTML = 'by <a href="#author-' + author + '">' + author + '</a>';
     /* generate HTML of the link */
+    const linkHTML = '<li><a href="#author-' + author + '">' + author + '</a></li>';
+    html = html + linkHTML;
+    /* [NEW] check if this link is NOT already in allAuthors */
+    if (!allAuthors.hasOwnProperty(author)) {
+      /* [NEW] add tag to allAuthors object */
+      allAuthors[author] = 1;
+    } else {
+      allAuthors[author]++;
+    }
   }
+  /* insert HTML of all the links into the tags wrapper */
+  authorWrapper.innerHTML = html;
+  /* insert HTML of all the links into the tags wrapper */
+  authorWrapper.innerHTML = html;
+  /* [NEW] find list of tags in right column */
+  const tagList = document.querySelector(optArticleAuthorSelector);
+  console.log(tagList);
+  /* [NEW] create new variable for all author links HTML code*/
+  let allAuthorsHTML = '';
+  /*[NEW] start LOOP for each authorTag in allAuthors*/
+  for (let author in allAuthors) {
+    /*[NEW] generate code of a link and add it to allAuthorsHTML*/
+    allAuthorsHTML += '<li><a href="#author-' + author + '">' + author + '</a></li>' + '(' + allAuthors[author] + ')';
+  }
+  authorWrapper.innerHTML = allAuthorsHTML;
 }
 generateAuthors();
 
