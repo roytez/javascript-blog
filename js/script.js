@@ -75,6 +75,30 @@ function generateTitleLinks(customSelector = ''){
 
 generateTitleLinks();
 
+function calculateTagsParams(tags) {
+  const tagsParams = { 'max': 0, 'min': 999999 };
+
+  for (let tag in tags) {
+    if (tagsParams.max < tags[tag]) {
+      tagsParams.max = tags[tag];
+    }
+    if (tagsParams.min > tags[tag]) {
+      tagsParams.min = tags[tag];
+    }
+  }
+  return tagsParams;
+}
+
+function calculateTagClass(count, tagsParams) {
+  const normalizedCount = count - tagsParams.min;
+  const normalizedMax = tagsParams.max - tagsParams.min;
+  const percentage = normalizedCount / normalizedMax;
+  const classNumber = Math.floor(percentage * (optCloudClassCount - 1) + 1);
+  const tagClass = optCloudClassPrefix + classNumber;
+  return tagClass;
+}
+
+
 // I część II modułu
 
 function generateTags(){
@@ -110,10 +134,12 @@ function generateTags(){
       if(!allTags.hasOwnProperty(tag)){
         /* [NEW] add tag to allTags object */
         allTags[tag] = 1;
+      } else {
+        allTags[tag]++;
       }
-
     /* END LOOP: for each tag */
     }
+    /* [NEW] find list of tags in right column */
     /* insert HTML of all the links into the tags wrapper */
     tagsList.innerHTML = html;
   /* END LOOP: for every article: */
@@ -121,9 +147,13 @@ function generateTags(){
   /* [NEW] find list of tags in right column */
   const tagList = document.querySelector('.tags');
 
+  /*[NEW] create const tagsParams*/
+  const tagsParams = calculateTagsParams(allTags);
+  console.log('tagsParams', tagsParams);
   /* [NEW] add html from allTags to tagList */
   //tagList.innerHTML = allTags.join(' ');
-  console.log(allTags);
+
+
 
   /* [NEW] create variable for all links HTML code */
   let allTagsHTML = '';
