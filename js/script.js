@@ -39,7 +39,7 @@ const optArticleSelector = '.post',
   optArticleAuthorSelector = '.authors',
 
   optCloudClassCount = 5,
-  optCloudClassPrefix = 'tag-size';
+  optCloudClassPrefix = 'tag-size-';
 
 
 function generateTitleLinks(customSelector = ''){
@@ -165,9 +165,8 @@ function generateTags(){
   for(let tag in allTags){
     /* [NEW] generate code of a link and add it to allTagsHTML */
     const tagLinkHTML = calculateTagClass(allTags[tag], tagsParams);
-    allTagsHTML += '<a href="#tag-' + tag + '" class="' + tagLinkHTML + '"> ' + tag + '</a>' /*+'(' + allTags[tag] + ')'*/ ;
+    allTagsHTML += '<a href="#tag-' + tag + '" class="' + tagLinkHTML + '"> ' + tag + '(' + allTags[tag] + ')</a>';
 
-    // allTagsHTML += tag + ' (' + allTags[tag] + ') ';
   }
   /* [NEW] END LOOP: for each tag in allTags: */
   /* [NEW] add html from allTagsHTML to tagList */
@@ -270,7 +269,8 @@ function generateAuthors(){
   /*[NEW] start LOOP for each authorTag in allAuthors*/
   for (let author in allAuthors) {
     /*[NEW] generate code of a link and add it to allAuthorsHTML*/
-    allAuthorsHTML += '<li><a href="#author-' + author + '">' + author + '</a></li>' + '(' + allAuthors[author] + ')';
+    allAuthorsHTML += '<li><a href="#author-' + author + '">' + author + '(' + allAuthors[author] + ')</a></li>';
+// allTagsHTML += '<a href="#tag-' + tag + '" class="' + tagLinkHTML + '"> ' + tag + '(' + allTags[tag] + ')</a>';
   }
   authorWrapper.innerHTML = allAuthorsHTML;
 }
