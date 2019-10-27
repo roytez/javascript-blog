@@ -128,10 +128,15 @@ function generateTags(){
     const articleTagsArray = articleTags.split(' ');
 
     /* START LOOP: for each tag */
+    const tplTagLinkSource = document.querySelector('#tamplate-tag-link').innerHTML;
+console.log(tplTagLinkSource);
+    const tplTagLink = Handlebars.compile(tplTagLinkSource);
+
     for(let tag of articleTagsArray){
 
       /* generate HTML of the link */
-      const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+    //  const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+      const linkHTML = tplTagLink({tag:tag});
       /* add generated code to html variable */
       html = html + linkHTML;
       /* [NEW] check if this link is NOT already in allTags */
@@ -153,7 +158,7 @@ function generateTags(){
 
   /*[NEW] create const tagsParams*/
   const tagsParams = calculateTagsParams(allTags);
-  console.log('tagsParams', tagsParams);
+
   /* [NEW] add html from allTags to tagList */
   //tagList.innerHTML = allTags.join(' ');
 
@@ -230,7 +235,7 @@ function addClickListenersToTags(){
 addClickListenersToTags();
 
 function generateAuthors(){
-  let allAuthors ={};
+  const allAuthors ={};
   /* find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
 
@@ -270,7 +275,7 @@ function generateAuthors(){
   for (let author in allAuthors) {
     /*[NEW] generate code of a link and add it to allAuthorsHTML*/
     allAuthorsHTML += '<li><a href="#author-' + author + '">' + author + '(' + allAuthors[author] + ')</a></li>';
-// allTagsHTML += '<a href="#tag-' + tag + '" class="' + tagLinkHTML + '"> ' + tag + '(' + allTags[tag] + ')</a>';
+
   }
   authorWrapper.innerHTML = allAuthorsHTML;
 }
