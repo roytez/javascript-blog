@@ -12,3 +12,42 @@ Stwórz selektor wybierający linki (<a>) na liście drugiego poziomu i nadaj im
 Prawie dobrze! Dopracujmy kilka ostatnich detali. Przede wszystkim chcielibyśmy, żeby linki drugiego poziomu zajmowały 100% szerokości swojego rodzica. Zapewni nam to właściwość display: block;. Uwaga! Upewnij się, że wyświetlanie blokowe będą miały tylko linki nawigacji drugiego poziomu! W przypadku linków nawigacji pierwszego poziomu nadal chcemy, żeby były liniowo-blokowe. Dodaj również linkom nawigacji drugiego poziomu padding równy 0 24px;.
 Aby wycentrować rozwijane menu względem jego rodzica (to znaczy względem linka pierwszego poziomu), dodaj do listy drugiego rzędu właściwości left: 50%; oraz transform: translateX(-50%);. Jak pamiętasz, lista drugiego poziomu jest absolute, a jej rodzic jest relative. Użycie powyższej transformacji wycentruje element absoute w osi X, czyli poziomo. Na końcu dodaj liście drugiego poziomu górny padding równy 12px;.
 Voila! Menu pojawiać się będzie po najechaniu kursorem na link pierwszego rzędu.
+
+
+slider
+<div id="main-slider" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="w-100" src="https://i.postimg.cc/j58JcVCw/MB.jpg" alt="image">
+            <div class="carousel-caption">
+                <h1 class="logo">Greece rent</h1>
+                <h4></h4>
+                <h3></h3>
+            </div>
+        </div>
+    <div class="carousel-item">
+        <img class="w-100" src="https://i.postimg.cc/Xq37gRH6/MW1.jpg" alt="image">
+        <div class="carousel-caption">
+                <h1 class="logo">Greece rent</h1>
+                <h4></h4>
+                <h3></h3>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img class="w-100" src="https://i.postimg.cc/TwtHkmQ2/MW3.jpg" alt="image">
+        <div class="carousel-caption">
+                <h1 class="logo">Greece rent</h1>
+                <h4></h4>
+                <h3></h3>
+        </div>
+    </div>
+</div>
+    <a class="carousel-control-prev" href="#main-slider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#main-slider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

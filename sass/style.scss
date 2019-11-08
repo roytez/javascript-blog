@@ -80,18 +80,27 @@ body {
   padding-top: 12px;
 }
 
+.navigation ul ul li a {
+  color: $color-dark;
+}
+
+.navigation ul ul {
+  border: 1px solid;
+  border-color: $color-dark;
+  border-radius: 5px;
+}
+
 /* Slider */
 
 .carousel-inner, .carousel-item {
   height: 90vh;
-  background-attachment: fixed;
-
 }
 
 .carousel-item img {
   height: 100%;
   object-fit: cover;
 }
+
 
 .carousel-caption {
     left: 50%;

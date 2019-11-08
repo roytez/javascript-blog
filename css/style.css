@@ -69,10 +69,19 @@ body {
   padding-top: 12px;
 }
 
+.navigation ul ul li a {
+  color: #444;
+}
+
+.navigation ul ul {
+  border: 1px solid;
+  border-color: #444;
+  border-radius: 5px;
+}
+
 /* Slider */
 .carousel-inner, .carousel-item {
   height: 90vh;
-  background-attachment: fixed;
 }
 
 .carousel-item img {
