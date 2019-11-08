@@ -1,14 +1,34 @@
 # grecce-rent
 
-W pliku HTML, pod nawigacją, stwórz element <header> o klasie splash. W CSS nadaj kolor tła (najlepiej taki, jak tło nawigacji), kolor czcionki, minimalną wysokość (w projekcie jest to 500px) oraz, co najważniejsze, display: flex;. To będzie nasz element-rodzic.
+1.7. Komponent: animowany przycisk
+Oba nagłówki w sekcji Splash są gotowe, ale czegoś jeszcze brakuje. Musimy ostylować przycisk! Nie róbmy tego jednak w pośpiechu – przyjrzyjmy się na spokojnie projektowi i sprawdźmy, jak sprytnie możemy ostylować wiele elementów za jednym zamachem. Umiejętność pisania oszczędnego, minimalistycznego kodu i inteligentne wykorzystanie klas pomocniczych to wyróżniki dobrego developera – warto więc uczyć się myśleć komponentowo!
 
-Wewnątrz <header> dodaj <div> o klasie splash-inner. W środku umieść element <h1> z klasą page-title i dowolną treścią, oraz <h2> z klasą page-subtitle - również wpisz w nim dowolną treść. Pod nagłówkiem <h2> umieść link (<a>) z atrybutem href równym # oraz dwiema klasami: btn oraz btn-one. W projekcie jego treść to "see our work", ale możesz wstawić własną.
+Jak widzisz, w projekcie mamy kilka rodzajów przycisków:
 
-W CSS nadaj elementowi splash-inner właściwość margin: auto;. I tylko tyle wystarczy, by dzięki flexboksowi perfekcyjnie wycentrować element w obu osiach! W projekcie dodatkowo nadaliśmy temu elementowi max-width: 70%;.
 
-Następnie ostyluj oba nagłówki zgodnie z własnym uznaniem. W projekcie główny tytuł ma zerowy margines, czcionkę 72px, word-spacing równy -24px, wagę 700 i interlinię - 1.2. Podtytuł natomiast ma margines 24px 0;, wagę czcionki 400 i rozmiar 16px;.
+Możesz w tym momencie zapytać: czy ten ostatni element na obrazku powyżej również jest przyciskiem, skoro wygląda jak link? Jak najbardziej – większość przycisków, które stworzymy, to właśnie linki (<a>), ostylowane w odpowiedni sposób. Nasze przyciski i linki to różne warianty tego samego elementu. Każdy z nich będzie miał dwie klasy – jedną ogólną, zawierającą style współdzielone z innymi elementami, oraz jedną szczegółową, odpowiedzialną za indywidualne cechy danego przycisku.
 
-Jak widzisz, w projekcie słowo „creatively” jest zapisane inną czcionką, niż reszta tytułu. Jak osiągnąć taki efekt? Za pomocą znanego Ci już znacznika <span>! Owiń wybrane słowo w tytule w znacznik <span></span> i za pomocą selektora .page-title span nadaj mu wybrane style.
+Nasza klasa ogólna to btn. Stwórz dla niej selektor w sekcji globalnych stylów Twojego pliku CSS i nadaj mu:
+
+display: inline-block;
+minimalną szerokość (min-width) równą 160px
+margin: 24px auto 0 auto;
+padding: 16px;
+border-radius: 5px;
+font-family takie, jak reszta tekstu na Twojej stronie
+font-size - w projekcie jest to 16px
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+Ponadto chcemy, aby domyślny przycisk miał dwupikselową ciągłą ramkę. Dodajmy zatem:
+
+border-width: 2px;
+border-style: solid;
+Prawie dobrze! Jak widzisz w podglądzie, powstał "generyczny", granatowy przycisk. Tak będzie wyglądał każdy button, któremu nadasz tylko klasę ogólną btn. Aby nadać przyciskowi indywidualny charakter, ostylujmy jego klasę szczegółową.
+
+Pod selektorem .btn dodaj selektor .btn-one i nadaj mu i nadaj mu dowolny border-color i color (w projekcie mają one kolor biały).
+
+Udało się!
 
 slider
 <div id="main-slider" class="carousel slide" data-ride="carousel">

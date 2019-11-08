@@ -79,25 +79,50 @@ body {
   border-radius: 5px;
 }
 
-/* Slider */
+/* Slider
+
 .carousel-inner, .carousel-item {
   height: 90vh;
 }
 
 .carousel-item img {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
+
 .carousel-caption {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  right: auto;
-  bottom: auto;
-  padding-top: 0;
-  padding-bottom: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: auto;
+    bottom: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+*/
+/* Splash */
+.splash-inner {
+  margin: auto;
+  max-width: 70%;
+}
+
+h1 {
+  font-family: "Sacramento", cursive;
+  margin: 0;
+  font-size: 72px;
+  word-spacing: 4px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+h2 {
+  margin: 24px 0;
+  font-weight: 400;
+  font-size: 35px;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
 }
 
 /* Logo */

@@ -90,7 +90,7 @@ body {
   border-radius: 5px;
 }
 
-/* Slider */
+/* Slider
 
 .carousel-inner, .carousel-item {
   height: 90vh;
@@ -110,6 +110,31 @@ body {
     bottom: auto;
     padding-top: 0;
     padding-bottom: 0;
+}
+*/
+
+/* Splash */
+
+.splash-inner {
+    margin: auto;
+    max-width: 70%;
+}
+h1 {
+  font-family: $font-logo;
+  margin: 0;
+  font-size: 72px;
+  word-spacing: 4px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+h2 {
+   margin: 24px 0;
+   font-weight: 400;
+   font-size: 35px;
+   font-family: $font-text;
+   text-align: center;
 }
 
 /* Logo */
