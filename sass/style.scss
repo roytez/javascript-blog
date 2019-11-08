@@ -18,23 +18,22 @@ $font-text: 'Source Sans Pro', sans-serif;
 body {
   font-family: $font-text;
   line-height: 1.7;
+  margin: 0;
 }
 
 .container {
   max-width: 1140px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 96px 0;
 }
 
 /* Navbar */
 
-.navbar.navbar-dark.bg-primary {
-  padding: 8px 0;
-  font-size: 0,875rem;
-}
 
-.contact {
-  color: black;
-}
 
 /* Slider */
 
@@ -67,6 +66,7 @@ body {
   font-size: 104px;
   line-height: 1;
   text-align: center;
+  color: #f6b93b;
 }
 
 /* Lists */
