@@ -9,6 +9,8 @@ $font-logo: 'Sacramento', cursive;
 $font-header: 'Oswald', sans-serif;
 $font-text: 'Source Sans Pro', sans-serif;
 
+$transition: all 1s;
+
 /* Global */
 
 *, *::before, *::after {
@@ -44,13 +46,26 @@ body {
   cursor: pointer;
   border-width: 2px;
   border-style: solid;
+  background-color: inherit;
+  background-position: 100% 0;
+  background-size: 300%;
+  transition: $transition;
+}
+
+.btn:hover {
+  background-position: 0 100%;
+  color: #f6b93b;
 }
 
 .btn-one {
     border-color: $color-dark;
     color: red;
+    background-image: linear-gradient(90deg, #f6b93b 50%, transparent 50%);
 }
 
+.btn-one:hover {
+  color: #ffffff;
+}
 /* Navigation */
 
 .navigation {

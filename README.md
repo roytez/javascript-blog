@@ -1,6 +1,17 @@
 # grecce-rent
 
+W swoim kodzie CSS:
 
+Do selektora .btn dodaj właściwość background-color: inherit;
+Do selektora .btn-one dodaj background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%);, zastępując w razie potrzeby wartość #ffffff (biały kolor) swoją własną zmienną lub wybranym kodem koloru.
+Teraz schowamy nasz gradient, a następnie dodamy kod, który sprawi, że po najechaniu kursorem na przycisk gradient wypełni go w całości.
+
+Do selektora .btn dodaj background-position: 100% 0; oraz background-size: 300%;.
+Stwórz selektor dla stanu :hover elementu .btn i nadaj mu background-position: 0 100%; oraz color: #ffffff;.
+W razie potrzeby zmień również kolor czcionki dla stanu :hover elementu .btn-one, aby była widoczna na wybranym tle.
+Aby uruchomić animację, dodaj selektorowi .btn właściwość transition podaną wyżej.
+
+Gotowe!
 
 slider
 <div id="main-slider" class="carousel slide" data-ride="carousel">
