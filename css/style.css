@@ -147,7 +147,7 @@ body {
   height: 80vh;
   display: -ms-flexbox;
   display: flex;
-  background-position: center center;
+  background-position: center right;
   background-size: cover;
   background-attachment: fixed;
 }
