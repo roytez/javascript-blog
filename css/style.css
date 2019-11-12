@@ -49,6 +49,7 @@ body {
   border-color: #444;
   color: red;
   background-image: linear-gradient(90deg, #f6b93b 50%, transparent 50%);
+  text-align: center;
 }
 
 .btn-one:hover {
@@ -139,16 +140,16 @@ body {
 .splash-inner {
   margin: auto;
   max-width: 70%;
+  text-align: center;
 }
 
 h1 {
   font-family: "Sacramento", cursive;
-  margin: 0;
+  margin: 24px 0;
   font-size: 72px;
   word-spacing: 4px;
   font-weight: 700;
   line-height: 1.2;
-  text-align: center;
 }
 
 h2 {
@@ -156,12 +157,12 @@ h2 {
   font-weight: 400;
   font-size: 35px;
   font-family: "Source Sans Pro", sans-serif;
-  text-align: center;
 }
 
-/* Logo */
+/* Logo
+
 .logo {
-  font-family: "Sacramento", cursive;
+  font-family: $font-logo;
   font-weight: 400;
   font-size: 104px;
   line-height: 1;
@@ -169,7 +170,7 @@ h2 {
   color: #f6b93b;
   margin-top: 20px;
 }
-
+*/
 /* Lists */
 .list {
   list-style-type: none;

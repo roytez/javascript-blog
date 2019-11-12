@@ -13,6 +13,15 @@ Aby uruchomić animację, dodaj selektorowi .btn właściwość transition podan
 
 Gotowe!
 
+html Logo
+
+<div class="blog">
+  <div class="container">
+    <h1 class="logo">Greece rent</h1>
+    <main class="wrapper">
+
+
+
 slider
 <div id="main-slider" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
