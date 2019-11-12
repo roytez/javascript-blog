@@ -1,11 +1,10 @@
 # grecce-rent
 
-.splash {
-    background: $color-main;
-    color: $color-two;
-    height: 500px;
-    display: flex;
-}
+Kiedy przyjrzysz się wyglądowi tej i kolejnych sekcji, zauważysz, że pojawił się kolejny wspólny element - tytuły poszczególnych sekcji wyglądają tak samo. Jak już wspomnieliśmy, identyczne elementy staramy się stylować raz, zgodnie z zasadą DRY (Don’t Repeat Yourself). Dlatego też style dla nagłówka umieść w CSS w sekcji /* Global */, w kolejnej linii.
+
+1. Dodaj selektor dla tego elementu (przypominamy, że ma on klasę section-title) oraz nadaj mu position: relative;, zdefiniuj rozmiar czcionki (np. 36px) oraz margines (np. 0 0 60px 0).
+
+
 
 html Logo
 

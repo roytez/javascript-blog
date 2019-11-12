@@ -145,6 +145,7 @@ body {
 .splash {
   background-image: url("https://i.postimg.cc/Xq37gRH6/MW1.jpg");
   height: 80vh;
+  position: static;
   display: -ms-flexbox;
   display: flex;
   background-position: center right;

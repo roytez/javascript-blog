@@ -161,11 +161,11 @@ body {
 .splash {
   background-image: url('https://i.postimg.cc/Xq37gRH6/MW1.jpg');
   height: 80vh;
+  position: static;
   display: flex;
   background-position: center right;
   background-size: cover;
   background-attachment: fixed;
-
 }
 
 .splash-inner {
@@ -173,6 +173,7 @@ body {
     max-width: 70%;
     text-align: center;
 }
+
 h1 {
   font-family: $font-logo;
   margin: 24px 0;
