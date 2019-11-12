@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext");
 /* Variables */
+/* blue */
+/* red */
+/* red */
+/* blue dark */
+/* white */
+/* green */
 /* Global */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -47,7 +53,7 @@ body {
 
 .btn-one {
   border-color: #444;
-  color: red;
+  color: #444;
   background-image: linear-gradient(90deg, #f6b93b 50%, transparent 50%);
   text-align: center;
 }
@@ -100,7 +106,6 @@ body {
   padding: 0 24px;
   left: 50%;
   transform: translateX(-50%);
-  position: absolute;
   padding-top: 12px;
 }
 
@@ -137,6 +142,16 @@ body {
 }
 */
 /* Splash */
+.splash {
+  background-image: url("https://i.postimg.cc/Xq37gRH6/MW1.jpg");
+  height: 80vh;
+  display: -ms-flexbox;
+  display: flex;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .splash-inner {
   margin: auto;
   max-width: 70%;
