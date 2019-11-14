@@ -1,29 +1,20 @@
 # grecce-rent
 
-3. Pod tagiem <h2> w sekcji skills wstaw znacznik <ul> (bez klasy), a wewnątrz niego znacznik <li> z dwiema klasami: skill i left.
+10. Rozwiązaniem pierwszego problemu jest stworzenie selektora mówiącego: "wybierz wszystkie elementy o klasie skill-image, znajdujące się wewnątrz elementu z klasami skill i right". To najbardziej złożony selektor, jaki stworzyliśmy do tej pory! Powinien wyglądać on tak: .skill.right .skill-image. Kiedy potrzebujemy wybrać w CSS element z dwiema klasami, nie wstawiamy między nimi spacji.
+
+Do tego selektora dodaj właściwość right: 0;. Oznacza ona, że element-dziecko ustawi się tuż przy prawej krawędzi elementu-rodzica.
 
 
-4. Wewnątrz <li> wstaw <div> z klasą skill-image. W tym divie umieść jeden z przygotowanych obrazków (jeżeli nie pamiętasz, jak wstawia się obrazki, wróć do submodułu "Podstawowe tagi HTML").
+Prawie dobrze! Teraz jeszcze tylko paddingi i wyrównanie tekstu.
+
+11. Stwórz selektor wybierający wszystkie elementy z klasą .skill-description, znajdujące się wewnątrz elementu z klasami skill i right (użyj poprzedniego selektora jako wzoru). Dodaj mu padding: 36px 55% 36px 0; i za pomocą text-align wyrównaj tekst do prawej (right). Powtórz proces dla selektora wybierającego wszystkie elementy z klasą .skill-description, znajdujące się wewnątrz elementu z klasami skill i left: jemu z kolei nadaj padding: 36px 0 36px 55%; i wyrównaj tekst do lewej (left).
 
 
-5. Pod tym divem wstaw kolejny <div>, tym razem o klasie skill-description. Wewnątrz umieść nagłówek poziomu trzeciego z klasą skill-title i dowolną treścią. Będzie to tytuł pierwszego pudełka z tekstem. Pod nagłówkiem wstaw akapit tekstu z dowolną treścią.
+Pamiętaj, że gdy wartość liczbowa jakiejś właściwości wynosi 0, nie używamy żadnej jednostki. Zapis np. 0px jest błędny.
 
+Voilà!
 
-6. Analogicznie stwórz dwa kolejne znaczniki <li> z taką samą zawartością, jeden pod drugim. Podmień w nich zdjęcia i treści. Dodatkowo, drugiemu znacznikowi <li> zmień klasę z left na right.
-
-Podgląd nie wygląda jeszcze imponująco - obrazki są za duże i źle wypozycjonowane. Zaraz to poprawimy.
-
-7. W pliku CSS dodaj "nagłówek" /* Skills */. Poniżej stwórz selektor wybierający tag <ul> wewnątrz tej sekcji i zresetuj mu domyślne style za pomocą list-style-type: none;, margin: 0; oraz padding: 0;.
-
-
-Następnie stwórz selektor wybierający znacznik <li> wewnątrz tej sekcji (.skills ul li) i nadaj mu position: relative;.
-
-8. Zajmijmy się teraz stylowaniem obrazków. Przypomnij sobie, jaką klasę miały divy, w które owinięte były w HTML tagi <img>, i stwórz dla nich selektor w CSS. Nadaj im position: absolute;, width: 50%;, height: 100%; oraz overflow: hidden;.
-
-
-9. Odśwież podgląd. Obrazki wyglądają już lepiej, ale fotografie są przycięte i źle wykadrowane. Aby to naprawić, dodaj selektor wybierający wszystkie tagi <img> w elementach o klasie skill-image i nadaj im width: 100%;, height: 100%; oraz object-fit: cover;. W ten sposób dopasowaliśmy obrazki do kontenerów.
-
-
+Teraz twoim zadaniem jest ostylowanie nagłówków i tekstów obok obrazków według własnych preferencji. Możesz inspirować się projektem, albo użyć własnej wyobraźni.
 
 
 html Logo
