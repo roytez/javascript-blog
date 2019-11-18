@@ -159,7 +159,7 @@ h2 {
 }
 
 .carousel-inner, .carousel-item {
-  height: 80vh;
+  height: 100vh;
 }
 
 .carousel-item img {
@@ -274,4 +274,10 @@ h2 {
   .active {
     font-weight: bold;
   }
+}
+
+/* Atrakcje */
+
+.card img {
+  height: 30vh;
 }

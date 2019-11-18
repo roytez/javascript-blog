@@ -1,65 +1,65 @@
 # grecce-rent
 
-10. Rozwiązaniem pierwszego problemu jest stworzenie selektora mówiącego: "wybierz wszystkie elementy o klasie skill-image, znajdujące się wewnątrz elementu z klasami skill i right". To najbardziej złożony selektor, jaki stworzyliśmy do tej pory! Powinien wyglądać on tak: .skill.right .skill-image. Kiedy potrzebujemy wybrać w CSS element z dwiema klasami, nie wstawiamy między nimi spacji.
-
-Do tego selektora dodaj właściwość right: 0;. Oznacza ona, że element-dziecko ustawi się tuż przy prawej krawędzi elementu-rodzica.
 
 
-Prawie dobrze! Teraz jeszcze tylko paddingi i wyrównanie tekstu.
+splash
 
-11. Stwórz selektor wybierający wszystkie elementy z klasą .skill-description, znajdujące się wewnątrz elementu z klasami skill i right (użyj poprzedniego selektora jako wzoru). Dodaj mu padding: 36px 55% 36px 0; i za pomocą text-align wyrównaj tekst do prawej (right). Powtórz proces dla selektora wybierającego wszystkie elementy z klasą .skill-description, znajdujące się wewnątrz elementu z klasami skill i left: jemu z kolei nadaj padding: 36px 0 36px 55%; i wyrównaj tekst do lewej (left).
-
-
-Pamiętaj, że gdy wartość liczbowa jakiejś właściwości wynosi 0, nie używamy żadnej jednostki. Zapis np. 0px jest błędny.
-
-Voilà!
-
-Teraz twoim zadaniem jest ostylowanie nagłówków i tekstów obok obrazków według własnych preferencji. Możesz inspirować się projektem, albo użyć własnej wyobraźni.
-
-
-html Logo
-
-<div class="blog">
-  <div class="container">
-    <h1 class="logo">Greece rent</h1>
-    <main class="wrapper">
-
-
-
-slider
-<div id="main-slider" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="w-100" src="https://i.postimg.cc/j58JcVCw/MB.jpg" alt="image">
-            <div class="carousel-caption">
-                <h1 class="logo">Greece rent</h1>
-                <h4></h4>
-                <h3></h3>
-            </div>
-        </div>
-    <div class="carousel-item">
-        <img class="w-100" src="https://i.postimg.cc/Xq37gRH6/MW1.jpg" alt="image">
-        <div class="carousel-caption">
-                <h1 class="logo">Greece rent</h1>
-                <h4></h4>
-                <h3></h3>
-        </div>
+<header class="splash">
+  <div class="splash-inner">
+    <div class="container">
+      <h1 class="page-title">Wymarzone wakacje w Grecji</h1>
+      <h2 class="page-subtitle">mieszkanie przy morzu</h2>
+      <a href="#" class="btn btn-one">galery</a>
     </div>
-    <div class="carousel-item">
-        <img class="w-100" src="https://i.postimg.cc/TwtHkmQ2/MW3.jpg" alt="image">
-        <div class="carousel-caption">
-                <h1 class="logo">Greece rent</h1>
-                <h4></h4>
-                <h3></h3>
+  </div>
+</header>
+
+map
+
+<div class="card mb-3">
+<img src="https://i.postimg.cc/ZqZGf8yR/100-steps.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+<h5 class="card-title">Card title</h5>
+<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+
+
+navi bootstrap
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Greece</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
         </div>
-    </div>
-</div>
-    <a class="carousel-control-prev" href="#main-slider" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#main-slider" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
