@@ -88,10 +88,16 @@ h2 {
     text-align: center;
 }
 
-
 .btn-one:hover {
   color: #ffffff;
 }
+
+.btn-two {
+  border-color: $color-dark;
+  color: $color-dark;
+  background-image: linear-gradient(90deg, #f6b93b 50%, transparent 50%);
+}
+
 /* Navigation */
 
 .navigation {
@@ -159,7 +165,7 @@ h2 {
 }
 
 .carousel-inner, .carousel-item {
-  height: 100vh;
+  height: 90vh;
 }
 
 .carousel-item img {
@@ -202,7 +208,7 @@ h2 {
 .section-title {
   position: relative;
   font-size: 36px;
-  margin: 0 0 60px 0;
+  margin: 0 0 40px 0;
   text-align: center;
 }
 
@@ -278,6 +284,20 @@ h2 {
 
 /* Atrakcje */
 
-.card img {
-  height: 30vh;
+.atraction .card img {
+  height: 25vh;
+}
+
+.atraction .card {
+  height: 55vh;
+}
+
+/* where */
+
+.where .card img {
+  height: 550px;
+}
+
+.card .mb-3 {
+  height: 80vh;
 }
