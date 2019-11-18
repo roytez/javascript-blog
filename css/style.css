@@ -123,6 +123,7 @@ h2 {
   left: 50%;
   transform: translateX(-50%);
   padding-top: 12px;
+  z-index: 1;
 }
 
 .navigation ul ul li a {
@@ -135,7 +136,10 @@ h2 {
   border-radius: 5px;
 }
 
-/* Slider
+/* Slider */
+.carousel .slide {
+  z-index: 2;
+}
 
 .carousel-inner, .carousel-item {
   height: 90vh;
@@ -143,26 +147,26 @@ h2 {
 
 .carousel-item img {
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
 
 .carousel-caption {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    right: auto;
-    bottom: auto;
-    padding-top: 0;
-    padding-bottom: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: auto;
+  bottom: auto;
+  padding-top: 0;
+  padding-bottom: 0;
 }
-*/
-/* Splash */
+
+/* Splash
+
 .splash {
-  background-image: url("https://i.postimg.cc/Xq37gRH6/MW1.jpg");
+  background-image: url('https://i.postimg.cc/Xq37gRH6/MW1.jpg');
   height: 80vh;
   position: static;
-  display: -ms-flexbox;
   display: flex;
   background-position: center right;
   background-size: cover;
@@ -170,11 +174,11 @@ h2 {
 }
 
 .splash-inner {
-  margin: auto;
-  max-width: 70%;
-  text-align: center;
+    margin: auto;
+    max-width: 70%;
+    text-align: center;
 }
-
+*/
 /* About */
 .section-title {
   position: relative;

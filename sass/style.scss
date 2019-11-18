@@ -138,6 +138,7 @@ h2 {
   left: 50%;
   transform: translateX(-50%);
   padding-top: 12px;
+  z-index: 1;
 }
 
 .navigation ul ul li a {
@@ -150,7 +151,11 @@ h2 {
   border-radius: 5px;
 }
 
-/* Slider
+/* Slider */
+
+.carousel .slide {
+  z-index: 2;
+}
 
 .carousel-inner, .carousel-item {
   height: 90vh;
@@ -171,9 +176,9 @@ h2 {
     padding-top: 0;
     padding-bottom: 0;
 }
-*/
 
-/* Splash */
+
+/* Splash
 
 .splash {
   background-image: url('https://i.postimg.cc/Xq37gRH6/MW1.jpg');
@@ -190,7 +195,7 @@ h2 {
     max-width: 70%;
     text-align: center;
 }
-
+*/
 /* About */
 
 .section-title {
