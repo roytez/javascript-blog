@@ -107,6 +107,7 @@ h2 {
 .navigation a {
   text-decoration: none;
   color: #fff;
+  font-size: 18px;
 }
 
 .navigation a:hover {
@@ -136,6 +137,7 @@ h2 {
 
 .navigation ul ul li a {
   color: #444;
+  font-size: 18px;
 }
 
 .navigation ul ul {
@@ -281,5 +283,41 @@ h2 {
 
 .card .mb-3 {
   height: 80vh;
+}
+
+/* where */
+.footer {
+  padding: 0;
+}
+
+.page-footer {
+  background: #444;
+  padding: 2px;
+  max-width: 100%;
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+  font-size: 18px;
+}
+
+.page-footer p {
+  margin: 16px 0 16px 0;
+}
+
+/* map */
+.map {
+  margin: 0;
+  padding: 0;
+}
+
+/* Media */
+@media (max-width: 767px) {
+  .navigation .container {
+    margin: 0 20px 0 20px;
+    padding: 0;
+  }
+  .navigation li {
+    margin: 0 25px 0 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
