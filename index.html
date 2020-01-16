@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pl">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <title>Blog</title>
+        <title>Grecja</title>
         <link href="https://fonts.googleapis.com/css?family=Asap:400,600i|Oxygen&display=swap&subset=latin-ext" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -14,6 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
 
+<<<<<<< HEAD
     <script id="tamplate-tag-link" type="text/x-handlebars-template">
       <li>
         <a href="#tag-{{ tag }}">{{ tag }}</a>
@@ -29,219 +31,225 @@
       <li><a href="#tg-{{tag}}" class="{{className}}"> {{tag}} </a>({{count}})</li>
       {{/each}}
     </script>
+=======
 
-    <div class="blog">
+>>>>>>> 45e3f90ddeeebc81574829c3030b79220d6d03a7
+
+    <nav class="navigation">
       <div class="container">
-        <h1 class="logo">my blog</h1>
-        <main class="wrapper">
-          <aside class="sidebar">
-            <h2 class="section-title">All posts</h2>
-            <ul class="list titles">
-
+        <ul>
+          <li><a href="#where">Where are we</a>
+            <ul>
+              <li><a href="#map">map</a></li>
+              <li><a href="#atraction">atracton</a></li>
+              <li><a href="#about">about</a></li>
             </ul>
-          </aside>
-          <section class="posts">
-            <article class="post active" id="article-1" data-tags="cat cactus scissors" data-author="Marion Berry">
-              <h3 class="post-title">Article 1</h3>
-              <p class="post-author">by </p>
-              <div class="post-content">
-                <p>Duis non dolor efficitur erat interdum fringilla a lobortis dolor. Aenean in massa viverra, pretium augue et, imperdiet diam. Proin varius vitae lectus ut suscipit. Etiam metus lacus, molestie at ante eget, gravida tristique metus. Morbi finibus elit mi, ut aliquam libero tempor eu.</p>
+          </li>
+          <li><a href="#">where</a></li>
+          <li><a href="#galery">galery</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-                <p>Curabitur a arcu ut nunc ornare tempor. Vestibulum et augue purus. Sed mattis auctor iaculis. Duis placerat tempus nisl, et commodo sem varius sed. Ut ac ultrices leo. Aliquam efficitur augue a scelerisque lacinia. Donec sit amet justo lacus.</p>
+    <div id="main-slider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="https://i.postimg.cc/j58JcVCw/MB.jpg" alt="image">
+                <div class="carousel-caption">
+                    <h1 class="page-title">Dream Holidays</h1>
+                    <h2 class="page-subtitle">Apartment By The Sea</h2>
+                    <a href="#galery" class="btn btn-one">galery</a>
+                </div>
+            </div>
+        <div class="carousel-item">
+            <img class="w-100" src="https://i.postimg.cc/Xq37gRH6/MW1.jpg" alt="image">
+            <div class="carousel-caption">
+              <h1 class="page-title">Dream Holidays</h1>
+              <h2 class="page-subtitle">Apartment By The Sea</h2>
+              <a href="#galery" class="btn btn-one">galery</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="w-100" src="https://i.postimg.cc/TwtHkmQ2/MW3.jpg" alt="image">
+            <div class="carousel-caption">
+              <h1 class="page-title">Dream Holidays</h1>
+              <h2 class="page-subtitle">Apartment By The Sea</h2>
+              <a href="#galery" class="btn btn-one">galery</a>
+            </div>
+        </div>
+    </div>
+        <a class="carousel-control-prev" href="#main-slider" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#main-slider" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 
-                <p>Duis tincidunt tellus non lorem molestie lobortis. Ut nec mauris consectetur, convallis nisl vel, venenatis magna. Sed efficitur egestas purus, eu fermentum leo sodales in.</p>
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">Room</h2>
+        <p>Nice apartment just a few steps from the beach with ancient places nearby- Corinth, Acrocorinth etc.
+          The apartment includes: kitchen connected with the living room with one double sofa, bathroom,
+          one room with 2 single beds and a balcony with the view to the sea.</p>
+        <p>The closest beach (&taverna) is about 50m from the apartment, whereas the main beach with
+          sunbeds to rent, luna park, big variety of restaurants and bars are just 300m from the place.
+          The place can fit max. 4 adult people + 1 child.</p>
+
+      </div>
+    </section>
+
+    <section class="skills" id="galery">
+      <div class="container">
+        <h2 class="section-title">Galery</h2>
+          <ul>
+            <li class="skill left">
+              <div class="skill-image">
+                <img src="https://i.postimg.cc/63rkTpkN/M2.jpg" alt="kuchnia" title="kuchnia">
               </div>
-              <div class="post-tags">
-                <p><strong>Tags:</strong></p>
-                <ul class="list list-horizontal">
-
-                </ul>
+              <div class="skill-description">
+                <h3 class="skill-title">Kitchen</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin placerat rutrum posuere. Donec eu neque mauris. Etiam ultricies turpis nibh, nec laoreet nisi venenatis id. Suspendisse et suscipit ipsum. Cras fringilla feugiat diam, vel aliquam nulla. Ut vulputate leo ut ligula tristique pretium.</p>
               </div>
-            </article>
-            <article class="post" id="article-2" data-tags="cactus dog paper" data-author="Theo Tabby">
-              <h3 class="post-title">Article 2</h3>
-              <p class="post-author">by </p>
-              <div class="post-content">
-                <p>Phasellus sollicitudin, arcu vel iaculis ullamcorper, quam leo viverra orci, et faucibus quam sapien vel est. Maecenas ac suscipit elit. Nullam interdum, lorem vitae venenatis pulvinar, ex dui malesuada nunc, tempus cursus enim metus vel nulla.</p>
-
-                <p>Integer hendrerit, eros id efficitur dapibus, ante arcu ullamcorper orci, a iaculis felis turpis at purus. Quisque sodales posuere sapien vel consectetur. Duis dui urna, commodo non ante nec, mattis dictum enim. Donec aliquam erat sed diam lobortis, vel gravida lacus laoreet. Phasellus pretium maximus mi, eu posuere justo suscipit vel.</p>
-
-                <p>Nam magna nisl, varius in malesuada vitae, facilisis vel metus. Proin rhoncus euismod leo dictum lobortis. Suspendisse non ante sapien.</p>
+            </li>
+          </ul>
+          <ul>
+            <li class="skill right">
+              <div class="skill-image">
+                <img src="https://i.postimg.cc/MpNPJfsp/M3.jpg" alt="salon" title="salon">
               </div>
-              <div class="post-tags">
-                <p><strong>Tags:</strong></p>
-                <ul class="list list-horizontal">
-
-                </ul>
+              <div class="skill-description">
+                  <h3 class="skill-title">Salon</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin placerat rutrum posuere. Donec eu neque mauris. Etiam ultricies turpis nibh, nec laoreet nisi venenatis id. Suspendisse et suscipit ipsum. Cras fringilla feugiat diam, vel aliquam nulla. Ut vulputate leo ut ligula tristique pretium.</p>
               </div>
-            </article>
-            <article class="post" id="article-3" data-tags="fish rock cactus" data-author="George Tuxedo">
-              <h3 class="post-title">Article 3</h3>
-              <p class="post-author">by </p>
-              <div class="post-content">
-                <p>Mauris vel pellentesque turpis, ac sodales nisl. Quisque iaculis mi velit, ut convallis tellus accumsan a. Quisque iaculis, nisi et dignissim tincidunt, nisl eros euismod nulla, finibus laoreet erat enim posuere elit.</p>
-
-                <p>Aenean at semper urna. Duis vel sapien molestie, egestas diam consequat, molestie nulla. Praesent a malesuada metus. Praesent et tempus leo.</p>
-                <p>Mauris in eleifend neque, vitae eleifend velit. Maecenas purus est, bibendum eget imperdiet id, dictum sed ante. Aenean a magna et eros sagittis aliquet.</p>
+            </li>
+          </ul>
+          <ul>
+            <li class="skill left">
+              <div class="skill-image">
+                  <img src="https://i.postimg.cc/J01bmCpZ/M5.jpg" alt="sypialnia" title="sypialnia">
               </div>
-              <div class="post-tags">
-                <p><strong>Tags:</strong></p>
-                <ul class="list list-horizontal">
-
-                </ul>
+              <div class="skill-description">
+                <h3 class="skill-title">Bedroom</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin placerat rutrum posuere. Donec eu neque mauris. Etiam ultricies turpis nibh, nec laoreet nisi venenatis id. Suspendisse et suscipit ipsum. Cras fringilla feugiat diam, vel aliquam nulla. Ut vulputate leo ut ligula tristique pretium.</p>
               </div>
-            </article>
-            <article class="post" id="article-4" data-tags="scissors dog cactus" data-author="Kitty Toebean">
-              <h3 class="post-title">Article 4</h3>
-              <p class="post-author">by </p>
-              <div class="post-content">
-                <p>Morbi vel cursus nulla, vel varius mauris. Suspendisse sed elit sit amet risus faucibus vestibulum ut sit amet purus. Donec orci est, condimentum ut quam quis, scelerisque fringilla ligula.</p>
-
-                <p>Quisque bibendum nisl id quam sagittis, id pretium dolor scelerisque. Suspendisse non odio nec velit dapibus placerat non a libero.</p>
-
-                <p>Vivamus at tristique ex, feugiat sagittis ex. Cras cursus, ipsum et efficitur commodo, urna sapien rutrum magna, quis sodales justo ligula eget nunc. In hac habitasse platea dictumst.</p>
+            </li>
+          </ul>
+          <ul>
+            <li class="skill right">
+              <div class="skill-image">
+                  <img src="https://i.postimg.cc/MpnDKZ43/M-1.jpg" alt="łazienka" title="łazienka">
               </div>
-              <div class="post-tags">
-                <p><strong>Tags:</strong></p>
-                <ul class="list list-horizontal">
-
-                </ul>
+              <div class="skill-description">
+                <h3 class="skill-title">Bathroom</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin placerat rutrum posuere. Donec eu neque mauris. Etiam ultricies turpis nibh, nec laoreet nisi venenatis id. Suspendisse et suscipit ipsum. Cras fringilla feugiat diam, vel aliquam nulla. Ut vulputate leo ut ligula tristique pretium.</p>
               </div>
-            </article>
-            <article class="post" id="article-5" data-tags="cat rock cheese" data-author="Marion Berry">
-              <h3 class="post-title">Article 5</h3>
-              <p class="post-author">by </p>
-              <div class="post-content">
-                <p>Suspendisse sem eros, euismod condimentum arcu ac, consequat fermentum orci. Nam convallis lacus nec interdum vestibulum. Vestibulum luctus, quam eu tristique ornare, lorem nibh sodales enim, vitae tempor dolor ante vitae tortor.</p>
+            </li>
+          </ul>
+      </div>
+    </section>
 
-                <p>Duis venenatis metus quis luctus lobortis. In porttitor ipsum eget ligula aliquam ornare. Cras malesuada urna id volutpat sodales.</p>
-
-                <p>Donec lobortis ultricies turpis, eu viverra magna gravida quis. Fusce sit amet pretium nulla. Duis rutrum metus vel libero sodales, pellentesque varius ex pulvinar.</p>
+    <section class="atraction" id="atraction">
+      <div class="container">
+        <h2 class="section-title">Attractions in the area</h2>
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="card-deck">
+              <div class="card">
+                <img src="https://i.postimg.cc/vBzXQKXR/corinth-1654936-640.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted"></small></p>
+                </div>
               </div>
-              <div class="post-tags">
-                <p><strong>Tags:</strong></p>
-                <ul class="list list-horizontal">
-
-                </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="card">
+              <img src="https://i.postimg.cc/3RXrWXDQ/greece-1281477-640.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted"></small></p>
               </div>
-            </article>
-            <article class="post" id="article-6" data-tags="cactus paper cat" data-author="George Tuxedo">
-              <h3 class="post-title">Article 6</h3>
-              <p class="post-author">by </p>
-              <div class="post-content">
-                <p>Donec posuere iaculis ante sed hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit neque nec urna tincidunt, quis vehicula dui vulputate. Morbi est sapien, auctor ut lectus eu, placerat viverra lorem.</p>
-
-                <p>Cras consectetur at erat id accumsan. Suspendisse lacinia in nulla quis vulputate. Nunc vitae consectetur augue. Nam ut vehicula mi. Aliquam tristique, purus in hendrerit porta, elit lectus finibus mi, vel malesuada nisl lectus a libero.</p>
-
-                <p>Nam quis efficitur ante. Sed eget purus quis ex commodo porta eu sit amet dolor. Mauris tellus nisl, dictum nec est vitae, condimentum ornare ante. Fusce ornare hendrerit maximus. In maximus rhoncus justo.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="card">
+              <img src="https://i.postimg.cc/hGhpSs6h/oia-416136-640.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted"></small></p>
               </div>
-              <div class="post-tags">
-                <p><strong>Tags:</strong></p>
-                <ul class="list list-horizontal">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                </ul>
-              </div>
-            </article>
-            <article class="post" id="article-7" data-tags="ice cactus dog" data-author="Kitty Teobean">
-              <h3 class="post-title">Article 7</h3>
-              <p class="post-author">by </p>
-              <div class="post-content">
-                <p>Donec eleifend mauris ac nisl fermentum, ac fermentum turpis dignissim. Aliquam diam nisl, imperdiet a varius eget, lobortis sed nisi. Nullam suscipit ipsum sed magna blandit, sed pellentesque urna malesuada.</p>
+    <section class="where" id="where">
+      <div class="container">
+        <h2 class="section-title">Where are we</h2>
+        <div class="card mb-3">
+          <img src="https://i.postimg.cc/ZqZGf8yR/100-steps.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+    </div>
+  </section>
 
-                <p>Duis vestibulum arcu et lectus viverra porta. Praesent tempor lacus eget quam mattis, sit amet venenatis diam ultrices. Morbi gravida sapien quis ligula tincidunt, vel sagittis erat ultrices.</p>
-
-                <p>Ut orci tellus, laoreet ac diam ut, tempus bibendum nisi. Nam egestas sagittis nibh. Curabitur tristique dui quis egestas pretium. Duis eu felis orci.</p>
-              </div>
-              <div class="post-tags">
-                <p><strong>Tags:</strong></p>
-                <ul class="list list-horizontal">
-
-                </ul>
-              </div>
-            </article>
-            <article class="post" id="article-8" data-tags="ball rock fish" data-author="Theo Tabby">
-              <h3 class="post-title">Article 8</h3>
-              <p class="post-author">by </p>
-              <div class="post-content">
-                <p>Praesent quis imperdiet erat. Curabitur tempor sapien a interdum malesuada. Proin libero erat, sagittis a sollicitudin eget, pulvinar nec risus. Cras et suscipit sem.</p>
-
-                <p>Maecenas consequat diam nec sollicitudin congue. Aenean porttitor porttitor quam, condimentum interdum metus congue sed. Donec at nulla ipsum.</p>
-
-                <p>Mauris non congue dui. Aenean ac eros vitae massa vulputate aliquet ut ac elit. Morbi iaculis auctor nunc aliquet luctus. Nunc tincidunt sem dui, quis interdum leo pellentesque eget. Fusce id leo varius, imperdiet nunc vitae, tristique mi. Mauris quis interdum justo. Mauris auctor purus eu leo faucibus feugiat. Nulla at odio vitae leo semper blandit.</p>
-              </div>
-              <div class="post-tags">
-                <p><strong>Tags:</strong></p>
-                <ul class="list list-horizontal">
-
-                </ul>
-              </div>
-            </article>
-            <article class="post" id="article-9" data-tags="cactus scissors ice" data-author="Marion Berry">
-              <h3 class="post-title">Article 9</h3>
-              <p class="post-author">by </p>
-              <div class="post-content">
-                <p>Tam et facilisis purus. Donec vulputate est quis lobortis posuere. Nunc vitae lorem ut odio faucibus pulvinar nec in justo. Ut ut ante ac tellus ornare tempus. Nunc maximus, tortor et dictum convallis, nunc libero posuere leo, scelerisque ultrices arcu sapien ut tellus.</p>
-
-                <p>Fusce lacinia augue massa, non tincidunt tortor auctor quis. Vestibulum ut pretium nisl. Etiam id tellus tempus, commodo ligula vehicula, porta magna.</p>
-
-                <p>Donec fringilla blandit dolor vel aliquet. Fusce tortor sapien, lobortis eu vehicula sit amet, dignissim et lectus. In ullamcorper metus vel massa fermentum, at fermentum dui sollicitudin. Nullam lacinia elit vel tortor ullamcorper pulvinar.</p>
-              </div>
-              <div class="post-tags">
-                <p><strong>Tags:</strong></p>
-                <ul class="list list-horizontal">
-
-                </ul>
-              </div>
-            </article>
-            <article class="post" id="article-10" data-tags="shoe dog paper" data-author="George Tuxedo">
-              <h3 class="post-title">Article 10</h3>
-              <p class="post-author">by </p>
-              <div class="post-content">
-                <p>Aliquam erat volutpat. Ut non eleifend lectus. Donec suscipit tellus tempor, ornare dui id, hendrerit neque. Phasellus lacinia laoreet dui in luctus. Sed hendrerit, magna sit amet varius tempor, augue augue scelerisque est, non scelerisque mauris libero eu sapien.</p>
-
-                <p>Sed at sapien in quam sollicitudin aliquam. In interdum metus a mi porttitor luctus. Sed commodo, arcu id lacinia posuere, felis elit pharetra urna, at feugiat est orci sit amet libero. Quisque in nisl est. Nullam vehicula at lectus non luctus. Cras aliquam neque magna, at varius nisi egestas ut.</p>
-
-                <p>Rhoncus purus nulla, non auctor lacus placerat ut. Aliquam condimentum eget magna ac gravida. Etiam egestas faucibus urna et finibus. Cras vel tellus vel magna suscipit euismod. Maecenas id arcu ante. Duis iaculis scelerisque erat, at ullamcorper arcu consectetur eu. Fusce aliquam diam at arcu pharetra, vel fermentum nunc lobortis.</p>
-              </div>
-              <div class="post-tags">
-                <p><strong>Tags:</strong></p>
-                <ul class="list list-horizontal">
-
-                </ul>
-              </div>
-            </article>
-          </section>
-          <aside class="sidebar">
-            <h2 class="section-title">Tags</h2>
-            <ul class="list tags">
-
-            </ul>
-            <h2 class="section-title">Authors</h2>
-            <ul class="list authors">
-              <li>
-                <a href="#">
-                  <span class="author-name">Kitty Toebean</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="author-name">Theo Tabby</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="author-name">George Tuxedo</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="author-name">Marion Berry</span>
-                </a>
-              </li>
-            </ul>
-          </aside>
-        </main>
+  <section class="map" id="map">
+    <div class="container">
+        <div class="row">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12583.13833516635!2d22.801405140221092!3d37.95881554404526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sOk%20Vrachati%20ul.Nikiz%206%20gps%2037.958969%2022.812627%20!5e0!3m2!1spl!2spl!4v1574682558846!5m2!1spl!2spl" width="1098" height="550" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div>
     </div>
+  </section>
+
+
+
+  <section class="contact" id="contact">
+     <div class="container">
+         <div class="row">
+             <div class="col-lg-4 col-md-12 order-3 order-md-1">
+                 <h4>Contact us</h4>
+                 <p>Lorem ipsum dolor sit amet.</p>
+                 <div class="form-group">
+                     <label for="exampleInputEmail1">Email address</label>
+                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <a href="#" class="btn btn-one">Send</a>
+             </div>
+             <div class="col-md-4 col-sm-12 pr-5 order-1 order-md-2">
+                 <h4>Our social networks</h4>
+                 <p>Aliquam tellus ipsum<br> maximus quis ligula vel.</p>
+                 <i class="fab fa-facebook-f"></i>
+                 <i class="fab fa-instagram"></i>
+                 <i class="fab fa-youtube"></i>
+                 <i class="fab fa-airbnb"></i>
+             </div>
+             <div class="box col-md-4 col-sm-12 order-2 order-md-3">
+                 <h4>Contact us</h4>
+                 <p>5896 Mauris Fusce<br>Quisque Nunc 15836 Mauris</p>
+                 <a href="https://adres strony">support@company.com</a>
+             </div>
+         </div>
+     </div>
+ </section>
+
+<section class="footer">
+  <footer class="page-footer">
+    <p>@ Mateusz Krasinkiewicz. All rights reserwed</p>
+  </footer>
+</section>
         <script src="js/script.js"></script>
     </body>
