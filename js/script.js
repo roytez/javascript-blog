@@ -1,5 +1,9 @@
 'use strict';
 
+const template = {
+  authorLink: Handlebars.compile(document.querySelector('#template-author-link').innerHTML),
+  tagCloudLink: Handlebars.compile(document.querySelector('#template-tag-Cloud-link').innerHTML),
+}
 
 
 function titleClickHandler(event){
@@ -22,7 +26,6 @@ function titleClickHandler(event){
   for(let activeArticle of activeArticles){
     activeArticle.classList.remove('active');
   }
-
   /* get 'href' attribute from the clicked link */
   const articleSelector = clickedElement.getAttribute('href');
 
@@ -52,6 +55,7 @@ function generateTitleLinks(customSelector = ''){
   let html = '';
 
   const articles = document.querySelectorAll(optArticleSelector + customSelector);
+  console.log(customSelector);
   for(let article of articles){
 
     /* get the article id */
@@ -62,10 +66,7 @@ function generateTitleLinks(customSelector = ''){
 
     /* get the title from the title element */
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-    //const linkHTML = tplArticleLink({articleId:articleTitle});
-    //const tplArticleLinkSource = document.querySelector('#tamplate-article-link').innerHTML;
-    //console.log(tplArticleLinkSource);
-    //const tplArticleLink = Handlebars.compile(tplArticleLink);
+
 
     /* create HTML of the link */
     html = html + linkHTML;
@@ -135,13 +136,12 @@ function generateTags(){
 
     /* START LOOP: for each tag */
     const tplTagLinkSource = document.querySelector('#tamplate-tag-link').innerHTML;
-    console.log(tplTagLinkSource);
     const tplTagLink = Handlebars.compile(tplTagLinkSource);
 
     for(let tag of articleTagsArray){
 
       /* generate HTML of the link */
-      //  const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+      //const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
       const linkHTML = tplTagLink({tag:tag});
       /* add generated code to html variable */
       html = html + linkHTML;
@@ -193,30 +193,29 @@ function tagClickHandler(event){
   const clickedElement = this;
   /* make a new constant "href" and read the attribute "href" of the clicked element */
   const href = clickedElement.getAttribute('href');
-  console.log('href');
+
 
   /* make a new constant "tag" and extract tag from the "href" constant */
   const tag = href.replace('#tag-', '');
 
   /* find all tag links with class active */
-  const articleTag = document.querySelectorAll('a.active[href^="#tag-"]');
+  const activeTagLinks = document.querySelectorAll('a.active[href^="#tag-"]');
 
   /* START LOOP: for each active tag link */
-  for(let tag of articleTag){
+  for(let activeTagLink of activeTagLinks){
 
     /* remove class active */
-    tag.classList.remove('active');
-    console.log(tag.classList);
+    activeTagLink.classList.remove('active');
 
   /* END LOOP: for each active tag link */
   }
   /* find all tag links with "href" attribute equal to the "href" constant */
-  const tagLinks = document.querySelectorAll(href);
+  const hrefTagLinks = document.querySelectorAll('a[href="' + href + '"]');
 
   /* START LOOP: for each found tag link */
-  for(let tags of tagLinks){
+  for(let hrefTagLink of hrefTagLinks){
   /* add class active */
-    tags.classList.add('active');
+    hrefTagLink.classList.add('active');
     console.log(tag.classList);
 
   /* END LOOP: for each found tag link */
@@ -258,7 +257,11 @@ function generateAuthors(){
 
     const postAuthor = article.querySelector('.post .post-author');
 
-    postAuthor.innerHTML = 'by <a href="#author-' + author + '">' + author + '</a>';
+    //postAuthor.innerHTML = 'by <a href="#author-' + author + '">' + author + '</a>';
+
+    const linkHTMLData = { id: author, title: author };
+    postAuthor.innerHTML = template.authorLink(linkHTMLData);
+
     /* generate HTML of the link */
     const linkHTML = '<li><a href="#author-' + author + '">' + author + '</a></li>';
     html = html + linkHTML;
